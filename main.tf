@@ -14,5 +14,4 @@ resource "google_compute_instance" "example_instance" {
   name         = "example-instance"
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"
-  // Additional configuration for the compute instance
 }
