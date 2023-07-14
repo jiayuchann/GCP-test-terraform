@@ -10,8 +10,10 @@ provider "google" {
   region = var.region
 }
 
-resource "google_compute_instance" "example_instance" {
-  name         = "example-instance"
-  machine_type = "n1-standard-1"
-  zone         = "us-central1-a"
+resource "google_storage_bucket" "test-bucket" {
+  project = var.project
+  name = "very_unique_bucket_2"
+  force_destroy = false
+  uniform_bucket_level_access = true
+  location = var.region
 }
