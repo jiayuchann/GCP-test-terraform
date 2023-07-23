@@ -47,7 +47,6 @@ name: 'Terraform'
 on:
   push:
     branches: [ "main" ]
-  pull_request:
 
 permissions:
   contents: read
@@ -62,7 +61,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: /terraform
+        working-directory: ./terraform
 
     steps:
     # Checkout the repository to the GitHub Actions runner
